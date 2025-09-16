@@ -14,4 +14,8 @@ app.use(express.json());
 app.use("/api/places", placesRoutes);
 
 const PORT = process.env.PORT || 5000;
+app.get("/", (req, res) => {
+    res.send("<h1>Welcome to the Backend Trend API</h1>");
+});
+
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
